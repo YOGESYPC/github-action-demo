@@ -1,0 +1,15 @@
+name: Run Bash Script
+
+on:
+  push:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Repository
+        uses: actions/checkout@v4
+
+      - name: Execute Bash Script
+        run: bash hello.sh
